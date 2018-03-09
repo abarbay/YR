@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+ <head>
+   <meta charset="utf-8">
+  <title>e-Panaszlap</title>
+  <link rel="stylesheet" type="text/css" href="oopsz.css">
+ </head>
+ <body>
+  <h2>Szomszéd bepanaszoló űrlap</h2>
+  <form>
+    <label for="nevTextBox">Név:</label><br>
+    <input id="nevTextBox" name="nev" required="true"><br>
+    <label for="lakcimTextBox">Lakcím:</label><br>
+    <input id="lakcimTextBox" name="lakcim"required="true"><br>
+
+    <input type="radio" name=lakasTipus id="lakas" value="lakas" onclick="lakasTipusMegjelenit();alapallapotbaVisszaallitas();">Lakás
+    <input type="radio" name=lakasTipus id="csaladi" value="csaladi" onclick="lakasTipusMegjelenit();lakasTipusEllenorzes();alapallapotbaVisszaallitas();">Családi ház
+    
+    <!--  alapból rejtem az emelet radio buttonokat -->
+    <div id="tipus" style="visibility:hidden">
+
+      <input type="radio" id="foldszint" name="em" value="foldszint" onclick="lakasTipusEllenorzes();alapallapotbaVisszaallitas();">Földszint
+      <input type="radio" id="tetoter" name="em" value="tetoter" onclick="lakasTipusEllenorzes();alapallapotbaVisszaallitas();">Legfelső emelet
+      <input type="radio" id="emelet" name="em" value="emelet" onclick="lakasTipusEllenorzes();alapallapotbaVisszaallitas();">Egyéb emelet
+
+    </div>
+    
+    <div id="szomszed_div" class="hide" >
+    <fieldset>
+    <h2>Ki(ke)t kíván bepanaszolni? </h2>
+
+      <input class="hide" type="checkbox"  id="s1" name="szomszed" value=1 onclick="lakasPanaszSzovegInputMegjelenit()"><label class="hide" id="ls1" for="s1">Baloldali szomszéd</label>
+      <input class="hide" type="checkbox"  id="s2" name="szomszed" value=2 onclick="lakasPanaszSzovegInputMegjelenit()"><label class="hide" id="ls2" for="s2">Jobb oldali szomszéd</label>
+      <input class="hide" type="checkbox"  id="s3" name="szomszed" value=3 onclick="lakasPanaszSzovegInputMegjelenit()"><label class="hide" id="ls3" for="s3">Alsó szomszéd</label>  
+      <input class="hide" type="checkbox"  id="s4" name="szomszed" value=4 onclick="lakasPanaszSzovegInputMegjelenit()"><label class="hide" id="ls4" for="s4">Felső szomszéd</label>  
+      <input class="hide" type="checkbox"  id="s5" name="szomszed" value=5 onclick="lakasPanaszSzovegInputMegjelenit()"><label class="hide" id="ls5" for="s5">Hátsó szomszéd</label>  
+      <input class="hide" type="checkbox"  id="s6" name="szomszed" value=6 onclick="lakasPanaszSzovegInputMegjelenit()"><label class="hide" id="ls6" for="s6">Szemben lévő szomszéd</label>  
+     
+  </fieldset>
+    </div>
+
+  
+  <div id="Kontener">
+      <div id="Bal_oldal" > 
+        <fieldset id="FS1" name="fs" class="hide" >
+        <legend >Baloldali szomszéd </legend>
+        <label for="ptb0">Panasz:</label><br>
+        <textarea id="ptb0" name="ptb" class="hide"></textarea>
+      </fieldset>
+
+      <fieldset id="FS2" name="fs" class="hide">
+        <legend >Jobboldali szomszéd</legend>
+        <label for="ptb1">Panasz:</label><br>
+        <textarea id="ptb1" name="ptb" class="hide"></textarea>
+      </fieldset>
+
+      <fieldset id="FS3" name="fs" class="hide">
+      <legend>Alsó szomszéd</legend>
+        <label for="ptb2">Panasz:</label><br>
+        <textarea id="ptb2" name="ptb" class="hide"></textarea>
+      </fieldset>
+
+      <fieldset id="FS4" name="fs" class="hide">
+      <legend>Felső szomszéd</legend>
+        <label for="ptb3">Panasz:</label><br>
+        <textarea id="ptb3" name="ptb" class="hide"></textarea>
+      </fieldset>
+
+      <fieldset id="FS5" name="fs" class="hide">
+      <legend>Hátsó szomszéd</legend>
+        <label for="ptb4">Panasz:</label><br>
+        <textarea id="ptb4" name="ptb" class="hide"></textarea>
+      </fieldset>
+
+      <fieldset id="FS6" name="fs" class="hide">
+      <legend>Szemben lévő szomszéd</legend>
+        <label for="ptb5">Panasz:</label><br>
+        <textarea id="ptb5" name="ptb" class="hide"></textarea>
+      </fieldset>
+
+      
+      </div>
+  </div>
+
+  <div id=dij></div>
+
+<hr>
+<!-- Print preview -->
+<input type="button" id="onellenorzesGomb" value="Önellenőrzés"  onclick="onellenorzes()"><br>
+<div id=onellenorzes class="hide">
+    <h2>Jóváhagyja a panaszt?</h2>
+    <input type="button" value="Igen"onclick="ugykezelesiDijSzamitas();gombEngedelyezes();">
+    <input type="button" id="nemGomb"  value="Nem" oclick="alapallapotbaVisszaallitas();">
+    <input type="button" id="benyujtas" disabled=true value="Benyújtás"  title="Print preview" onclick="printMorePages();print();alapallapotbaVisszaallitas();">  
+</div>
+
+   
+  </form>
+  
+  <p>
+   <div>A panaszok benyújása: kinyomtatva, aláírva, személyesen</div>
+   <div>Országos Operatív Panaszkezelő Szervezet</div>
+   <div>Honlap: <a href="www.oopsz.mi">oopsz.mivan</a></div>
+   <div>Ügyfélfogadás: minden szökőnapon szünettel</div>
+  </p>
+  <p><sup>&copy;</sup>Kissfalusy Zrt.</p>
+  <div id=cont>
+    <div></div>
+  </div>
+
+
+  <script type="text/javascript" src="oopsz.js"></script>
+ </body>
+</html>

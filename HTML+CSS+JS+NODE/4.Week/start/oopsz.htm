@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+ <head>
+   <meta charset="utf-8">
+  <title>e-Panaszlap</title>
+  <link rel="stylesheet" type="text/css" href="oopsz.css">
+ </head>
+ <body>
+  <h2>Szomszéd bepanaszoló űrlap</h2>
+  <form>
+    <label for="nevTextBox">Név:</label><br>
+    <input id="nevTextBox" name="nev"><br>
+    <label for="lakcimTextBox">Lakcím:</label><br>
+    <input id="lakcimTextBox" name="lakcim"><br>
+   <fieldset>
+    <legend>Baloldali szomszéd</legend>
+    <label for="balpanaszTextBox">Panasz:</label><br>
+    <textarea id="balpanaszTextBox" name="balpanasz"></textarea>
+   </fieldset>
+   <fieldset>
+    <legend>Jobboldali szomszéd</legend>
+    <label for="jobbpanaszTextBox">Panasz:</label><br>
+    <textarea id="jobbpanaszTextBox" name="jobbpanasz"></textarea>
+   </fieldset>
+<!-- Print preview -->
+   <input type="button" value="Benyújtás" title="Print preview" onclick="print();">
+  </form>
+  
+  <p>
+   <div>A panaszok benyújása: kinyomtatva, aláírva, személyesen</div>
+   <div>Országos Operatív Panaszkezelő Szervezet</div>
+   <div>Honlap: <a href="www.oopsz.mi">oopsz.mivan</a></div>
+   <div>Ügyfélfogadás: minden szökőnapon szünettel</div>
+  </p>
+  <p><sup>&copy;</sup>Kissfalusy Zrt.</p>
+  <script type="text/javascript" src="oopsz.js"></script>
+ </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Yellowroad Csocsó Bajnokság</title>
+	<link rel="stylesheet" type="text/css" href="csocsoBajnoksag.css">
+	<script type="text/javascript" src="csocsoBajnoksag.js"></script>
+</head>
+	<body>
+		<div class="header"><img src="Images/header.jpg"></div>
+	<!--A csapatok sorsolása után ebbe a táblázatba helyezzük a csapatokat -->
+	<button type="button" id="sorsolasButton" onclick="Tabella();">Sorsolás</button>
+		<div id="sorsolas">
+			
+			<table border="0">
+				<thead>
+					<tr align="center">
+						<td width="150px">Csapatnév</td>
+						<td width="200px">Csatár</td>
+						<td width="200px">Védő</td>
+					</tr>
+				</thead>
+					<tbody>
+					<!--SORSOLAS JS-->
+					</tbody>
+			</table>
+		</div>
+	<!--Ide kerül a tabella-->
+		<div id="tabella">
+			<table border="0">
+				<thead>
+					<tr align="center">
+						<td width="150px">Csapatnév</td>
+						<td width="60px">GY</td>
+						<td width="60px">V</td>
+						<td width="60px">G</td>
+						<td width="60px">P</td>
+					</tr>
+				</thead> 
+					<tbody>
+					<!--TABELLA JS-->
+					</tbody>
+			</table>
+		</div>
+	<!--Ebben a divben futnak le a mérkőzések-->
+		<div id="meccsek">
+			<table class="meccsekSheet" border="0" align="center">
+					<tr height=20%>
+						<td width=30% align="center" valign="middle"><button type="button" id="startButton" onclick="kovetkezo_Meccs();">Bajnokság indítása!</button></td>
+						<td><div id="bal1" class="balEmber"></div><div id="eredmeny1"></div><div id="jobb1" class="jobbEmber" border="0"></div></td>
+					</tr>
+					<tr>
+						<td rowspan="2" valign="top">
+							<ul id="komment" type="none">
+								<!--Ide jönnek a meccs közbeni kommentárok-->
+							</ul>
+						</td>
+						<td  align="center" valign="middle"><img src="Images/asztal_2.png" ></td>
+					</tr>
+					<tr height=20%>
+						<td><div id="bal2" class="balEmber"></div><div id="eredmeny2"></div><div id="jobb2" class="jobbEmber" border="0"></div></td>
+					</tr>
+			</table>
+		</div>
+		<div class="header" ><img src="Images/CSAPAAT.jpg"></div>
+	</body>
+</html>

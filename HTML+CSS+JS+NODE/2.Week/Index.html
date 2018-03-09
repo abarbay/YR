@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Auto kereskedés</title>
+			<link type="text/css" rel="stylesheet" href="Styles/Style.css">
+			<meta charset="UTF-8">
+	</head>
+	<body>
+		<div class="title" id="title">
+			<p style="font-weight: 900; font-size: 64px; text-align: center;">Dr. Á+D+L+M gépjármű kiértékesítő társaság</p>
+			<p align="center"><i>Ahova az autók is halni járnak</i></p>
+		</div>
+		<div class="opening container">
+			<div class="opening dellaLeft">
+				<img src="Images/dollar3b.gif">
+			</div>
+			<div class="opening textCar">
+				<h1 align="center" style="color: white;"><u>Köll auttó?</u></h1>
+				<p align="center">Akor a legjobb hejjen jársz!</p>
+				<p align="center">Mi szerettyük a zsettát, úgyhoty ha fizec, mekkapod az attót bérlésre vagy örökbe.</p>
+				<p align="center" style="font-size: 24px;">Nem csalás, nem ámítás! Mi bisztos nem verünkát!</p>
+			</div>
+			<div class="opening dellaRight">
+				<img src="Images/dollar3b.gif">
+			</div>
+		</div>
+
+		<div class="parent_div" id='parent_div'>
+
+			<div class='cardiv l_side'>
+				<select id="lstAutok"  size="16" onchange="detailsShowHandler(); MakeButtonsAppear();">
+	        <optgroup label="Fiat">
+            <option value="p1">500</option>
+            <option value="p2">Tipo</option>
+            <option value="p3">Punto</option>
+	        </optgroup>
+	        <optgroup label="Ford">
+            <option value="p4">Fiesta</option>
+            <option value="p5">Focus</option>
+            <option value="p6">Mondeo</option>
+	        </optgroup >
+	        <optgroup label="Opel">
+            <option value="p7">Corsa</option>
+            <option value="p8">Astra</option>
+            <option value="p9">Insignia</option>
+	        </optgroup>
+	        <optgroup label="Skoda">
+            <option value="p10">Fabia</option>
+            <option value="p11">Octavia</option>
+            <option value="p12">Superb</option>
+	        </optgroup>
+	        <optgroup label="Suzuki">
+            <option value="p13">Ignis</option>
+            <option value="p14">Swift</option>
+            <option value="p15">Vitara</option>
+	        </optgroup>
+				</select>
+			</div>
+
+			<div class="cardiv speedImg">
+				<img id="speedImgIn" src="Images/speed.png">
+			</div>
+
+	    <div class='cardiv r_side'>
+				<div class="carname" style="width: 100%;">
+					<h2 id='car_name'></h2>
+				</div>
+
+        <div class='details'>
+	        <p class="car_details" id='year'></p>
+	        <p class="car_details" id='ccm'></p>
+	        <p class="car_details" id='daily_cost'></p>
+	        <p class="car_details" id='purchase_price'></p>
+        </div>
+
+        <div class='pic'>
+            <img id='car_img' src=''>
+        </div>
+	    </div>
+		</div>
+
+		<div class="buttons" id="buttons">
+			<button type="button" class="button rentButton" id="rentButton" onclick="makeTextAppear('rent', 'buy');">Kibérlem</button>
+			<button type="button" class="button buyButton" id="buyButton" onclick="makeTextAppear('buy', 'rent');">Megveszem</button>
+		</div>
+
+		<br><br>
+  <div class="monetize rent" id="rent" style="display: none; text-align: center; align-items: center;">
+		<p style="font-weight: 50; font-size: 48px;">Autóbérlés</p>
+		<form>
+			<label for="napokSzama" style="font-family: Helvetica; color: white; font-size: 24px;">Bérelt napok száma: </label>
+			<input type="textbox" id="napokSzama" name="napokSzama" style="height: 25px"><span style="font-family: Helvetica; color: white; font-size: 24px;">&nbsp; nap</span>
+			<br><br>
+			<button type="button" id="szamol" name="szamol" onclick="berletiDijSzamitas(); SealTheDealAppear();">Kalkuláció</button><br><br>
+			<label for="berletiDij" style="font-family: Helvetica; color: white; font-size: 24px;">Bérleti díj: </label>
+			<input type="textbox" id="berletiDij" readonly="readonly" disabled="true" style="height: 25px"/><span style="font-family: Helvetica; color: white; font-size: 24px;">&nbsp; Ft</span>
+		</form>
+	</div>
+
+	<div class="monetize buy" id="buy" style="display: none; text-align: center; align-items: center;">
+		<p style="font-weight: 50; font-size: 48px;">Vásárlás</p>
+		<form>
+			<label for="txtFutamido" style="font-family: Helvetica; color: white; font-size: 24px;">Futamidő:</label>
+			<input type="text" id="txtFutamido" name="txtFutamido" placeholder="Törlesztés ideje (hó)" style="height: 25px">
+			<br><br>
+			<button type="button" onclick="reszletKiszamitasaButton_ClickHandler(); SealTheDealAppear();">Kalkuláció</button><br><br>
+			<label for="txtReszlet" style="font-family: Helvetica; color: white; font-size: 24px;">Havi részlet díja:</label>
+			<input type="text" id="txtReszlet" name="txtReszlet" disabled="true" style="height: 25px">
+		</form>
+	</div>
+
+	<div id="sealTheDeal" style="display: none; align-items: center; text-align: center;">
+		<p style="font-size: 36px; color: red;">Seal the deal!</p>
+		<button id="sealTheDealButton" style="cursor: crosshair;" onclick="alert('NYEHEHEHEHEHEHEEEE!!!!'); changePic();"><img src="Images/seal_the_deal.jpg"></button>
+	</div>
+
+		<script type="text/javascript" src="scripts/scripts.js"></script>
+	</body>
+
+</html>

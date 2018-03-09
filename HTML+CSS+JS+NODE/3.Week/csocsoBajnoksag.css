@@ -1,0 +1,175 @@
+body
+{
+    font-family: corbel;
+    font-size: 14px;
+    background-color: #f3f3f3;
+}
+
+.header
+{
+    position: static;
+    text-align: center;
+}
+
+/*GOMBOK*/
+
+button
+{
+    border: 4px solid black;
+    border-radius: 6px;
+    background: linear-gradient(to bottom right, #ceb700, yellow);
+    font-family: corbel;
+    font-size: 14px;
+    font-weight: bold;
+} 
+
+button:hover
+{
+     background: linear-gradient(to bottom right, #b38d00, #ceb700);
+}
+
+#startButton:hover
+{
+    position: relative;
+    top: 2px;
+}
+
+
+#sorsolasButton
+{
+    position: absolute;
+    top: 330px;
+    left: 105px;
+    
+}
+
+#kovetkezoButton
+{
+    position: relative;
+    margin-bottom: 10px;
+    left: 140px;
+}
+
+#startButton
+{
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+}
+
+/*TÁBLÁZATOK*/
+
+table
+{
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 7px 5px 20px #1b1b1b;
+}
+
+thead
+{
+
+    background-color: yellow;
+    font-size: 16px;
+    font-weight: bold;
+}
+#sorsolas
+{
+    position: relative;
+    left: 45px;
+    margin: 50px; 
+}
+
+#tabella
+{
+    position: relative;
+    left: 280px;
+    margin: 50px;
+    
+}
+
+#tabella, #sorsolas
+{
+    display: inline-block;
+}
+
+#tabella tr, #sorsolas tr
+{
+    height: 35px;
+}
+
+#meccsek
+{
+    position: relative;
+    align-content: center;
+    margin: 0 50px 50px 50px;
+  
+}
+
+.meccsekSheet
+{
+    width: 80%;
+    height: 600px;
+    background-color: white;
+}
+
+#komment
+{
+    border: 5px solid black;
+    border-radius: 10px;
+    height: 97%;
+    font-size: 12px;
+    font-weight: bold ;
+    text-align: left;
+    line-height: 120%;
+    padding-right: 30px;
+    padding-top: 30px;
+    overflow: scroll;
+}
+
+/*KÉPEK*/
+
+.balEmber
+{
+    position: relative;
+    left: 80px;
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+}
+.jobbEmber
+{
+    position: relative;
+    left: 380px;
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+}
+#eredmeny1
+{
+   position: relative;
+    left: 230px;
+    width: 100px;
+    height: 100px; 
+    line-height: 100px;
+    font-family: Mistral;
+    font-size: 70px;
+    text-align: center;
+    vertical-align: top;
+}
+#eredmeny2
+{
+   position: relative;
+    left: 230px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-family: Mistral;
+    font-size: 70px; 
+    text-align: center;
+    vertical-align: top;
+}
+.balEmber, .jobbEmber, #eredmeny1, #eredmeny2
+{
+    display: inline-block;
+}

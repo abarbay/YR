@@ -1,0 +1,130 @@
+body {
+  background-color: #455a64;
+}
+
+div {
+  font-family: "Helvetica";
+}
+
+option {
+  font-size: 24px;
+  text-align: center;
+}
+
+p {
+  font-family: Helvetica;
+  color: white;
+}
+
+optgroup {
+  font-size:24px;
+}
+
+.container {
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+}
+
+.textCar {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+.dellaLeft {
+  margin: auto;
+  width: 10%;
+}
+.dellaRight {
+  margin: auto;
+  width: 10%;
+}
+
+.parent_div {
+    align-items: center;
+    overflow: hidden;
+}
+
+.cardiv {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+
+.l_side {
+  float: left;
+  background-color: #b0bec5;
+}
+
+.speedImg {
+  float: left;
+  display: inline;
+  margin: 20px;
+  width: 17.5%;
+  vertical-align: middle;
+}
+
+.r_side {
+  float: right;
+  background-color: #b0bec5;
+}
+
+.details {
+  float: left;
+  margin-right: 5px;
+}
+
+.buttons {
+  display: none;
+  align-items: center;
+  margin: 20px;
+}
+
+.button {
+  color: white;
+  border: none;
+  padding: 30px 64px;
+  text-align: center;
+  font-size: 32px;
+  font-family: Helvetica;
+  margin: auto;
+  cursor: pointer;
+}
+
+.rentButton {background-color: #4CAF50;}
+.buyButton {background-color: #008CBA;}
+
+.monetize {
+  margin: 20px;
+}
+
+.pic {
+  float:right;
+}
+
+.car_details {
+  font-size: 24px;
+  color: black;
+}
+
+.carname {
+  text-align: center;
+
+}
+
+#car_img {
+  border-radius: 4px;
+  width: 640px;
+  margin: 10px;
+}
+
+#lstAutok {
+  width: 200px;
+  margin: 20px;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  border: none;
+  background-color: #b0bec5;
+}

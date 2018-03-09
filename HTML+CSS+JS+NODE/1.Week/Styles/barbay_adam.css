@@ -1,0 +1,39 @@
+body {background:black;
+    }
+p 		{color:yellow;
+		 font-family: 'Sniglet', cursive;
+		}
+		
+h1.cim  {text-align:center;
+		font-size:450%;
+		color:yellow;
+		font-family: 'Luckiest Guy', cursive;
+	   }
+
+
+.focim1 {font-size:400%;
+		 font-family: 'Sniglet', cursive;
+		 color:yellow;
+		 text-align:center;
+		}
+
+.nevek {font-size:250%;
+		 font-family: 'Sniglet', cursive;
+		 color:yellow;
+		 text-align:center;
+		}
+.form_name		{color:yellow;
+				 font-family: 'Sniglet', cursive;
+				}
+		
+		
+
+
+
+
+.ures_hely {height:100px;}
+
+.planets img {align:middle;}
+p.planets {text-align:center;
+		   font-size:125%;
+		  }

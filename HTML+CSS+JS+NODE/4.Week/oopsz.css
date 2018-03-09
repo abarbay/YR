@@ -1,0 +1,52 @@
+
+
+body {
+		font-family:sans-serif;
+		background-color:whitesmoke;
+	}
+        h2 {
+		color:blue;
+		text-shadow:2px 2px darkgrey;
+	}
+	label:hover {
+		font-size:24pt;
+	}
+	input:focus {
+		background-color:yellow;
+	}
+	textarea:focus {
+		background-color:yellow;
+  }
+ /* Adam css */
+  .hide {
+	  display: none;
+  }
+
+  .show{
+	  display:initial;
+  }
+
+  .pagebreak{ 
+	  display:block; page-break-after:always; 
+	}	
+
+  #Bal_oldal  {
+   float:inline;
+  }
+
+  #Jobb_oldal {
+   float:right;
+   
+  }
+
+ @media print {
+	*{ 	color: black;
+	   	text-transform: uppercase;
+	   	font-style: italic; 	
+	}
+	 h2 {
+		color: black;
+		text-shadow:2px 2px gray;
+	}
+	 
+ }
